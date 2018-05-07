@@ -1,0 +1,13 @@
+{
+  "name": "$project",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "$license",
+  "private": false,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "description": "project-template",
+  "repository": "https://github.com/$name/$project",
+  "author": "$author"
+}
