@@ -1,0 +1,20 @@
+{
+  "name": "$project",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "$license",
+  "private": false,
+  "scripts": {
+    "start": "node index.js",
+    "build": "rollup -c"
+  },
+  "description": "project-template",
+  "repository": "https://github.com/$name/$project",
+  "author": "$author",
+  "devDependencies": {
+    "rollup": "^0.58.2"
+  },
+  "dependencies": {
+    "custom-select-mixins": "^0.13.0"
+  }
+}

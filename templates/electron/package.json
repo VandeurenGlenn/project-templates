@@ -1,0 +1,30 @@
+{
+  "name": "$project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gui.js",
+  "scripts": {
+    "install": "./node_modules/.bin/electron-rebuild",
+    "start": "electron .",
+    "c": "rollup -c",
+    "w": "rollup -c -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "repository": "https://github.com/$name/$project",
+  "author": "$author",
+  "license": "$license",
+  "devDependencies": {
+    "electron": "^8.1.1",
+    "electron-rebuild": "^1.10.1",
+    "rollup": "^2.0.6",
+    "rollup-plugin-json": "^4.0.0"
+  },
+  "dependencies": {
+    "custom-drawer": "^1.0.0",
+    "custom-header": "^0.11.0",
+    "custom-pages": "^0.12.1",
+    "custom-selector": "^0.2.1",
+    "custom-tabs": "^0.13.1"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@vandeurenglenn/project",
+  "version": "0.2.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js",
+    "build": "rollup -c"
+  },
+  "description": "project-template",
+  "repository": "https://github.com/vandeurenglenn/project",
+  "author": "vandeurenglenn <vandeurenglenn@gmail.com>",
+  "devDependencies": {
+    "rollup": "^2.6.1"
+  },
+  "dependencies": {
+    "inquirer": "^7.1.0",
+    "vinyl-read": "^1.0.0"
+  },
+  "bin": {
+    "jsproject": "cli.js"
+  }
+}

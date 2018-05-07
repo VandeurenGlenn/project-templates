@@ -1,0 +1,13 @@
+{
+  "name": "project-name",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "description": "project-template",
+  "repository": "https://github.com/vandeurenglenn/project-name",
+  "author": "vandeurenglenn <vandeurenglenn@gmail.com>"
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <$project-shell>
+      <$project-header slot="header">
+      
+        <$project-toolbar slot="top">
+          <h1>$project</h1>
+        </$project-toolbar>
+        
+        <$project-toolbar slot="bottom">
+          <h2>subtitle</h2>
+        </$project-toolbar>
+        
+      </$project-header>
+      <$project-pages slot="pages">
+        <$project-home-view></$project-home-view>
+      </$project-pages>
+    </$project-shell>
+    
+    <script src="./shell.js" type="module"></script>
+  </body>
+</html>

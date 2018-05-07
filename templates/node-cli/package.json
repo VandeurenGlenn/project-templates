@@ -1,0 +1,24 @@
+{
+  "name": "$project",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "$license",
+  "private": false,
+  "bin": {
+    "$project": "cli.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "build": "rollup -c"
+  },
+  "description": "project-template",
+  "repository": "https://github.com/$name/$project",
+  "author": "$author",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "inquirer": "^5.2.0"
+  },
+  "devDependencies": {
+    "rollup": "^0.58.2"
+  }
+}
