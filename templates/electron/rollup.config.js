@@ -8,19 +8,9 @@ export default [{
 		sourcemap: false
 	}
 }, {
-	input: ['src/www/shell.js'],
+	input: ['src/www/shell.js', 'src/www/sections/home.js'],
 	output: {
 		dir: './www',
-		format: 'es',
-		sourcemap: false
-	},
-	plugins: [
-		json()
-	]
-}, {
-	input: ['src/www/sections/home.js'],
-	output: {
-		dir: './www/sections',
 		format: 'es',
 		sourcemap: false
 	},

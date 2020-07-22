@@ -9,7 +9,6 @@ export default customElements.define('$project-pages', class extends mixin(HTMLE
   
   connectedCallback() {
     if (super.connectedCallback) super.connectedCallback();
-    (async () => await import('./views/home.js'))();
   }
   
   get template() {

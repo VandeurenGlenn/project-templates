@@ -1,5 +1,3 @@
-// node rollup
-
 export default () => {
   
 }

@@ -5,16 +5,17 @@
   "license": "$license",
   "private": false,
   "scripts": {
-    "start": "node index.js",
+    "start": "jsproject --serve www",
     "build": "rollup -c"
   },
-  "description": "project-template",
+  "description": "project template scaffold",
   "repository": "https://github.com/$name/$project",
   "author": "$author",
   "devDependencies": {
-    "rollup": "^0.58.2"
+    "rollup": "^2.13.1"
   },
   "dependencies": {
-    "custom-select-mixins": "^0.13.0"
+    "custom-select-mixins": "^0.13.0",
+    "custom-selector": "^0.2.1"
   }
 }

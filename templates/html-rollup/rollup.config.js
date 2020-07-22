@@ -2,7 +2,7 @@ export default [
 	{
 		input: ['src/shell.js'],
 		output: {
-			dir: 'public',
+			dir: 'www',
 			format: 'es',
 			sourcemap: false
 		}

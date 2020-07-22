@@ -11,6 +11,7 @@ export default customElements.define('$project-toolbar', class extends HTMLEleme
       :host {
         display: flex;
         flex-direction: column;
+        background: var(--dark-primary-color);
       }
     </style>
       <slot name="left"></slot>

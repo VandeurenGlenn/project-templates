@@ -12,6 +12,6 @@
   "repository": "https://github.com/$name/$project",
   "author": "$author",
   "devDependencies": {
-    "rollup": "^0.58.2"
+    "rollup": "^2.13.1"
   }
 }

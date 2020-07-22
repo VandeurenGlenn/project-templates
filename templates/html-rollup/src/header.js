@@ -11,13 +11,31 @@ export default customElements.define('$project-header', class extends HTMLElemen
       :host {
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.72)
+        background: var(--primary-color);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.72);
+        padding: 12px 24px;
+        box-sizing: border-box;
+        height: var(--app-header-height);
+      }
+      
+      ::slotted(*) {
+        margin: 0;
+      }
+      
+      .flex {
+        flex: 1;
       }
     </style>
 
-      <slot name="top"></slot>
-      <slot></slot>
-      <slot name="bottom"></slot>
+    <slot name="top"></slot>
+    
+    <span class="flex"></span>
+    
+    <slot></slot>
+    
+    <span class="flex"></span>
+    
+    <slot name="bottom"></slot>
 
     `
   }
