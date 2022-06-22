@@ -15,7 +15,7 @@
   "repository": "https://github.com/$name/$project",
   "author": "$author",
   "dependencies": {
-    "inquirer": "^5.2.0",
+    "inquirer": "^6.5.1",
     "meow": "^7.0.1"
   },
   "devDependencies": {
