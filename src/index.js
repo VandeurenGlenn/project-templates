@@ -33,11 +33,11 @@ const getConfig = async () => {
         message: 'github user email',
         default: `${name}@gmail.com`
       }])
-      
+
       const { license, defaultTemplate } = await prompt([{
         type: 'input',
         name: 'license',
-        message: 'preferred license' 
+        message: 'preferred license'
       }])
       await writeFile(configPath, JSON.stringify({email, name, license, defaultTemplate}));
       return await getConfig();
@@ -49,48 +49,50 @@ const getConfig = async () => {
       `
       Usage
         $ jsproject [option] <input>
-      
+
       Quick template
         $ jsproject [template]
-      
+
       Options
         --template, -r <template> Template to scaffold
-        
+
         --name, -n <name> Project name - default's to directory name
-        
+
         --upgrade, -u <option> Upgrade dependencies
-        
+
         --serve, -s <path> Serve html app (defaults to www)
-        
+
         --run, -r <option> Start desktop app
-        
-        --port, -p <number> 
-        
+
+        --port, -p <number>
+
+        --host, -h <string> hostname or ip
+
         --yesToAll, -y Accept all default prompts
-        
+
         --skipInstall, -S
-        
-      
+
+
       ## template options
-      template: 
+      template:
         - node: start a new nodejs project
         - node-rollup: start a new nodejs project using rollup for building and code splitting
         - node-cli: start a new nodejs cli project using rollup for building and code splitting
         - electron: start a new electron desktop app
-        
+
         example: jsproject node
                  jsproject --template node
-      
-      name: 
+
+      name:
         name of your project, defaults to current working directory when not set
-        
+
         example: project node project-name
-      
+
       ## maintaining
-      
+
       upgrade:
       - latest
-      
+
       example: project upgrade latest
       `, {
         flags: {
@@ -118,6 +120,14 @@ const getConfig = async () => {
             type: 'boolean',
             alias: 'y'
           },
+          port: {
+            type: 'number',
+            alias: 'p'
+          },
+          host: {
+            type: 'string',
+            alias: 'h'
+          },
           skipInstall: {
             type: 'boolean',
             alias: 'S'
@@ -126,6 +136,7 @@ const getConfig = async () => {
       })
   // console.log(cli);
   const flags = cli.flags
+  console.log(flags);
   const flagsLength = Object.keys(cli.flags).length
   if (cli.input.length === 0 && flagsLength === 0) return cli.showHelp()
   else if (cli.input.length !== 0 && flagsLength === 0 ||
@@ -134,17 +145,17 @@ const getConfig = async () => {
   }
   if (flags.serve) {
     const importee = await import('./project-serve.js')
-    return importee(flags.serve, flags.port)
+    return importee.default(flags.serve, flags.port, flags.host)
   }
-  const config = await getConfig();  
+  const config = await getConfig();
   let template = process.argv[2];
   let project = process.argv[3];
-  
-  
+
+
   const dest = process.argv[4] || process.cwd();
-  
+
   if (!cli.flags.name) cli.flags.name = basename(process.cwd())
-  
+
   if (cli.flags.template) {
     config.project = cli.flags.name;
     config.author = `${config.name} <${config.email}>`
@@ -154,8 +165,8 @@ const getConfig = async () => {
     await projectBuild(dest)
     return
   } else if (cli.flags.upgrade) await projectUpgrade(dest, cli.flags.upgrade)
-  
-  
-  
+
+
+
 
 })()

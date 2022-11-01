@@ -26,4 +26,4 @@ var projectServe = (path$1 = 'www', port = 3000, host = '127.0.0.1') => {
   return _server
 };
 
-module.exports = projectServe;
+exports.default = projectServe;

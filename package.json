@@ -12,7 +12,7 @@
   "repository": "https://github.com/vandeurenglenn/project",
   "author": "vandeurenglenn <vandeurenglenn@gmail.com>",
   "devDependencies": {
-    "rollup": "^2.6.1"
+    "rollup": "^2.47.0"
   },
   "dependencies": {
     "inquirer": "^7.1.0",

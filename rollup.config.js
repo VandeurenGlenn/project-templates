@@ -4,7 +4,7 @@ const { version, name } = JSON.parse(npmPackage);
 const production = Boolean(process.argv[2] === 'production');
 export default [
 	{
-		input: ['src/index.js'],
+		input: ['src/index.js', 'src/project-serve.js'],
 		output: {
 			dir: './',
 			format: 'cjs',
