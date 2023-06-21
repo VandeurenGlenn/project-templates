@@ -20,7 +20,7 @@
     "koa-mount": "^4.0.0",
     "koa-serve": "^0.1.7",
     "koa-static": "^5.0.0",
-    "meow": "^7.0.1",
+    "meow": "^10.0.0",
     "open": "^7.0.4",
     "vinyl-read": "^1.0.0"
   },
