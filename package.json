@@ -6,7 +6,9 @@
   "private": false,
   "scripts": {
     "start": "node index.js",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "description": "project-template",
   "repository": "https://github.com/vandeurenglenn/project",
@@ -22,9 +24,11 @@
     "koa-static": "^5.0.0",
     "meow": "^7.0.1",
     "open": "^7.0.4",
-    "vinyl-read": "^1.0.0"
+    "vinyl-read": "^1.0.0",
+    "@snyk/protect": "latest"
   },
   "bin": {
     "jsproject": "cli.js"
-  }
+  },
+  "snyk": true
 }
