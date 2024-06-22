@@ -1,30 +1,38 @@
 {
   "name": "@vandeurenglenn/project",
   "version": "0.2.2",
-  "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "private": false,
   "scripts": {
-    "start": "node index.js",
+    "start": "node dist/index.js",
     "build": "rollup -c"
+  },
+  "exports": {
+    "./build.js": {
+      "import": "./dist/build.js"
+    }
   },
   "description": "project-template",
   "repository": "https://github.com/vandeurenglenn/project",
   "author": "vandeurenglenn <vandeurenglenn@gmail.com>",
   "devDependencies": {
-    "rollup": "^2.47.0"
+    "rollup": "^4.18.0"
   },
   "dependencies": {
-    "inquirer": "^7.1.0",
-    "koa": "^2.12.0",
+    "inquirer": "^9.2.23",
+    "koa": "^2.15.3",
     "koa-mount": "^4.0.0",
     "koa-serve": "^0.1.7",
     "koa-static": "^5.0.0",
-    "meow": "^7.0.1",
-    "open": "^7.0.4",
+    "meow": "^13.2.0",
+    "open": "^10.1.0",
     "vinyl-read": "^1.0.0"
   },
+  "files": [
+    "dist"
+  ],
   "bin": {
-    "jsproject": "cli.js"
+    "jsproject": "dist/index.js"
   }
 }
